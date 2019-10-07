@@ -165,7 +165,7 @@ public class ProcessingFragment extends Fragment implements OrderAdapter.OnItemC
 
         final ProgressDialog loading = ProgressDialog.show(getActivity(),"Please Wait","Contacting Server",false,false);
 
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, Config.ORDER_STATUS_COMPLETE+sellerLocation+"&sellerID="+sellerID,
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, Config.ORDER_STATUS_PROCESSING+sellerLocation+"&sellerID="+sellerID,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -314,7 +314,7 @@ public class ProcessingFragment extends Fragment implements OrderAdapter.OnItemC
         final ProgressDialog loading = ProgressDialog.show(getActivity(),"Please Wait","Contacting Server",false,false);
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET,
-                Config.COMPLETE_CHECK_TODAY_QTT+currentDate+"&sellerID="+sellerID, new Response.Listener<String>() {
+                Config.PROCESSING_CHECK_TODAY_QTT+currentDate+"&sellerID="+sellerID, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
 
