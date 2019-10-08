@@ -9,23 +9,23 @@ public class Config {
     public static final String ORDER_DATE = "orderDate";
     public static final String ORDER_TIME = "orderTime";
 
-    public static final String ACCEPT_ORDER_URL = "http://gmartbox.cvmall.my/apps/seller/acceptorder.php";
+    public static final String ACCEPT_ORDER_URL = "https://gmartbox.cvmall.my/apps/seller/acceptorder.php";
 
-    public static final String CANCEL_ORDER_URL = "http://gmartbox.cvmall.my/apps/seller/cancelorder.php";
+    public static final String CANCEL_ORDER_URL = "https://gmartbox.cvmall.my/apps/seller/cancelorder.php";
 
 
-    public static final String FEEDBACK_URL = "http://gmartbox.cvmall.my/apps/admin/feedback.php";
+    public static final String FEEDBACK_URL = "https://gmartbox.cvmall.my/apps/admin/feedback.php";
 
     public static final String TOTAL_FOOD_PRICE = "totalfoodPrice";
 
-    public static final String SCANNER_URL = "http://gmartbox.cvmall.my/apps/admin/scanner.php?orderID=";
+    public static final String SCANNER_URL = "https://gmartbox.cvmall.my/apps/admin/scanner.php?orderID=";
 
-    public static final String ORDER_STATUS_COMPLETE = "http://gmartbox.cvmall.my/apps/seller/orderstatuscomplete.php?orderLocation=";
-    public static final String ORDER_STATUS_PROCESSING = "http://gmartbox.cvmall.my/apps/seller/orderstatusprocessing.php?orderLocation=";
-    public static final String PROFILE = "http://gmartbox.cvmall.my/apps/seller/getsellerinfo.php?sellerUserName=";
+    public static final String ORDER_STATUS_COMPLETE = "https://gmartbox.cvmall.my/apps/seller/orderstatuscomplete.php?orderLocation=";
+    public static final String ORDER_STATUS_PROCESSING = "https://gmartbox.cvmall.my/apps/seller/orderstatusprocessing.php?orderLocation=";
+    public static final String PROFILE = "https://gmartbox.cvmall.my/apps/seller/getsellerinfo.php?sellerUserName=";
 
-    public static final String PROCESSING_CHECK_TODAY_QTT = "http://gmartbox.cvmall.my/apps/seller/gettodayqttprocessing.php?currentDate=";
-    public static final String COMPLETE_CHECK_TODAY_QTT = "http://gmartbox.cvmall.my/apps/seller/gettodayqttcomplete.php?currentDate=";
+    public static final String PROCESSING_CHECK_TODAY_QTT = "https://gmartbox.cvmall.my/apps/seller/gettodayqttprocessing.php?currentDate=";
+    public static final String COMPLETE_CHECK_TODAY_QTT = "https://gmartbox.cvmall.my/apps/seller/gettodayqttcomplete.php?currentDate=";
     //FOR ORDER
     public static final String ORDER_ID = "orderid";
     public static final String CARD_ID = "cardID";
@@ -56,8 +56,8 @@ public class Config {
     public static final String SELLER_LOCATION = "slocationID";
 
 
-    public static final String LOGIN_URL = "http://gmartbox.cvmall.my/apps/seller/loginseller.php";
-    //public static final String REGISTER_URL = "http://gmartbox.cvmall.my/apps/registerqniti.php";
+    public static final String LOGIN_URL = "https://gmartbox.cvmall.my/apps/seller/loginseller.php";
+    //public static final String REGISTER_URL = "https://gmartbox.cvmall.my/apps/registerqniti.php";
 
     //Keys for email and password as defined in our $_POST['key'] in login.php
 //public static final String KEY_ID = "userIC";
