@@ -18,7 +18,7 @@ public class Config {
 
     public static final String TOTAL_FOOD_PRICE = "totalfoodPrice";
 
-    public static final String SCANNER_URL = "https://gmartbox.cvmall.my/apps/admin/scanner.php?orderID=";
+    public static final String SCANNER_URL = "https://gmartbox.cvmall.my/apps/seller/scanner.php?orderID=";
 
     public static final String ORDER_STATUS_COMPLETE = "https://gmartbox.cvmall.my/apps/seller/orderstatuscomplete.php?orderLocation=";
     public static final String ORDER_STATUS_PROCESSING = "https://gmartbox.cvmall.my/apps/seller/orderstatusprocessing.php?orderLocation=";
@@ -43,6 +43,8 @@ public class Config {
     public static final String ORDER_USERTYPE = "orderUserType";
     public static final String PICKUP_LOCATION = "puLocation";
     public static final String PICKUP_TIME = "puTime";
+
+    public static final String FROM_SCANNER = "frScanner";
 
     public static final String COMPLETE_DATE = "completeDate";
     public static final String COMPLETE_TIME = "completeTime";

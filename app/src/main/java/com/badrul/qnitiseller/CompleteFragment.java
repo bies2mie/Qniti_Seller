@@ -299,6 +299,7 @@ public class CompleteFragment extends Fragment implements OrderAdapter.OnItemCli
         editor.putString(Config.ORDER_COMPLETEDATE, order.getCompleteDate());
         editor.putString(Config.ORDER_COMPLETETIME, order.getCompleteTime());
         editor.putString(Config.TOTAL_FOOD_PRICE, order.getTotalPrice());
+        editor.putString(Config.FROM_SCANNER,"NO");
 
 
         // Saving values to editor

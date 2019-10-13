@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         setContentView(R.layout.activity_main);
 
         //loading the default fragment
-        loadFragment(new ProcessingFragment());
+        loadFragment(new ScannerFragment());
 
         //getting bottom navigation view and attaching the listener
         BottomNavigationView navigation = findViewById(R.id.navigation);
@@ -45,6 +45,10 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         Fragment fragment = null;
 
         switch (item.getItemId()) {
+
+            case R.id.navigation_scanner:
+                fragment = new ScannerFragment();
+                break;
 
             case R.id.navigation_processing:
                 fragment = new ProcessingFragment();
