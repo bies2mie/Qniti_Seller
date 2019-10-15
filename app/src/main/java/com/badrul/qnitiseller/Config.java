@@ -50,6 +50,8 @@ public class Config {
     public static final String COMPLETE_TIME = "completeTime";
     public static final String ORDER_STATUS = "orderStatus";
 
+    public static final String USER_TOKEN = "userToken";
+
     //For User
     public static final String S_ID2 = "sID2";
     public static final String SELLER_ID2 = "sellerID2";

@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.AuthFailureError;
@@ -22,6 +23,10 @@ import com.android.volley.TimeoutError;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.iid.InstanceIdResult;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -47,6 +52,7 @@ public class LoginPage extends AppCompatActivity {
     String sellerName;
     String sellerPhone;
     String sellerLocation;
+    String token;
 
 
     @Override
@@ -60,6 +66,22 @@ public class LoginPage extends AppCompatActivity {
 
         userList = new ArrayList<>();
         Button btnLogin = findViewById(R.id.btnLogin);
+
+
+        FirebaseInstanceId.getInstance().getInstanceId()
+                .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<InstanceIdResult> task) {
+                        if (!task.isSuccessful()) {
+
+                            return;
+                        }
+
+                        // Get new Instance ID token
+                        token = task.getResult().getToken();
+
+                    }
+                });
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -154,8 +176,9 @@ public class LoginPage extends AppCompatActivity {
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String,String> params = new HashMap<String, String>();
                 //Adding parameters to request
-                params.put("sellerUserName", "seller1");
-                params.put("sellerPass", "123");
+                params.put("sellerUserName", userEmailID);
+                params.put("sellerPass", passwordP);
+                params.put("sellerToken", token);
 
                 //returning parameter
                 return params;
