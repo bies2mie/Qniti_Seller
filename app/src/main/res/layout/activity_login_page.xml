@@ -5,6 +5,7 @@
     android:gravity="center"
     android:orientation="vertical"
     android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@mipmap/loginbg">
     <!-- <GridLayout
         android:layout_width="235dp"
@@ -72,11 +73,16 @@
             android:background="@drawable/textboxcornerwhite"
             android:ems="10"
             android:hint=" Enter Your Username"
-            android:padding="10dp"
+            android:padding="12dp"
             android:singleLine="true"
             android:textColor="#5e6266"
             android:textColorHint="#5e6266"></EditText>
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:hintEnabled="false"
+            app:passwordToggleEnabled="true">
         <EditText
             android:id="@+id/password"
             android:layout_width="fill_parent"
@@ -89,6 +95,7 @@
             android:singleLine="true"
             android:textColor="#5e6266"
             android:textColorHint="#5e6266" />
+        </com.google.android.material.textfield.TextInputLayout>
         <!-- Login Button -->
 
         <Button
@@ -96,7 +103,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            android:background="@drawable/buttoncornerredgrad2"
+            android:background="@drawable/buttoncornerred10"
             android:text="SIGN IN"
             android:textColor="#ffff" />
 

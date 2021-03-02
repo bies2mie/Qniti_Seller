@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHolder> {
@@ -77,6 +78,13 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHol
             textShowDate = itemView.findViewById(R.id.showDate);
             //imageView = itemView.findViewById(R.id.imageView);
         }
+    }
+    //This method will filter the list
+//here we are passing the filtered data
+//and assigning it to the list with notifydatasetchanged method
+    public void filterList(ArrayList<Order> filterdNames) {
+        this.orderList = filterdNames;
+        notifyDataSetChanged();
     }
     public void setOnClick(OnItemClicked onClick)
     {

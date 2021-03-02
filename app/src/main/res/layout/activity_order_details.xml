@@ -4,31 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
+    android:background="@color/colorWhite"
     android:orientation="vertical"
     tools:context=".OrderDetails">
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="match_parent"
-        android:background="@drawable/redgrad"
         android:layout_height="wrap_content"
+        android:background="@color/red"
+        android:gravity="center"
         android:padding="10dp"
-        android:text="" />
+        android:text="Order Details"
+        android:textColor="@color/colorWhite"
+        android:textSize="22dp"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="@dimen/activity_horizontal_margin"
         android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="Order Details"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textStyle="bold" />
 
         <ScrollView
             android:layout_width="match_parent"
@@ -42,7 +38,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="0dp"
                     android:orientation="horizontal">
 
                     <LinearLayout
@@ -56,10 +52,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Buyer Name"
+                            android:textSize="14dp"
                             android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/buyerNametxt"
+                            android:textSize="14dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="buyerName" />
@@ -70,11 +68,13 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
                             android:text="Phone Number"
+                            android:textSize="14dp"
                             android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/phoneNumtxt"
                             android:layout_width="match_parent"
+                            android:textSize="14dp"
                             android:layout_height="wrap_content"
                             android:text="TextView" />
 
@@ -83,12 +83,14 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
+                            android:textSize="14dp"
                             android:text="Purchase Date and Time"
                             android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/purchasedateNtime"
                             android:layout_width="match_parent"
+                            android:textSize="14dp"
                             android:layout_height="wrap_content"
                             android:text="TextView" />
 
@@ -98,11 +100,13 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
                             android:text="Order Status"
+                            android:textSize="14dp"
                             android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/orderStat"
                             android:layout_width="match_parent"
+                            android:textSize="14dp"
                             android:layout_height="wrap_content"
                             android:text="TextView" />
 
@@ -112,29 +116,16 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
                             android:text="Order User Type"
+                            android:textSize="14dp"
                             android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/orderUserTypetxt"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:textSize="14dp"
                             android:text="Tiada" />
 
-                        <TextView
-                            android:id="@+id/cancelTxtUp"
-                            android:layout_marginTop="5dp"
-                            android:textStyle="bold"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Sebab Batal"
-                            android:visibility="gone"/>
-
-                        <TextView
-                            android:id="@+id/cancelTxt"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="info----"
-                            android:visibility="gone"/>
 
                     </LinearLayout>
 
@@ -150,12 +141,14 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Buyer Email"
+                            android:textSize="14dp"
                             android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/buyerEmailtxt"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:textSize="14dp"
                             android:text="TextView" />
 
                         <TextView
@@ -164,12 +157,14 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
                             android:text="Order ID"
+                            android:textSize="14dp"
                             android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/orderIDtxt"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:textSize="14dp"
                             android:text="TextView" />
 
                         <TextView
@@ -177,6 +172,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
+                            android:textSize="14dp"
                             android:text="Complete Date and Time"
                             android:textStyle="bold" />
 
@@ -184,6 +180,7 @@
                             android:id="@+id/completedatentime"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:textSize="14dp"
                             android:text="TextView" />
 
                         <TextView
@@ -192,15 +189,36 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
                             android:text="Matric / Staff ID"
+                            android:textSize="14dp"
                             android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/matrixIDtxt"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:textSize="14dp"
                             android:text="Tiada" />
+
+                        <TextView
+                            android:id="@+id/cancelTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Cancellation Reason"
+                            android:textSize="14dp"
+                            android:textStyle="bold"
+                            android:visibility="gone"/>
+
+                        <TextView
+                            android:id="@+id/cancelTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14dp"
+                            android:text="None"
+                            android:visibility="gone"/>
                     </LinearLayout>
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -213,7 +231,7 @@
 
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textSize="18dp"
                         android:text="Purchase Item"
                         android:textStyle="bold" />
 
@@ -230,20 +248,22 @@
 
                             <TextView
 
-                                android:id="@+id/orderDayTxt"
+                                android:id="@+id/orderTypeTxt"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="10dp"
                                 android:text="Monday"
-                                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                                android:textColor="@color/colorBlack"
+                                android:textSize="18dp" />
 
                             <TextView
 
-                                android:id="@+id/orderTypetxt"
+                                android:id="@+id/orderDaytxt"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Lunch"
-                                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                                android:textColor="@color/colorDeepBlue"
+                                android:textSize="18dp" />
 
                         </LinearLayout>
 
@@ -255,7 +275,8 @@
                             android:layout_marginTop="10dp"
                             android:layout_weight="1"
                             android:text="x2"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                            android:textColor="@color/colorDarkYellow"
+                            android:textSize="18dp" />
 
                     </LinearLayout>
 
@@ -277,7 +298,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="10dp"
                                 android:text="Hotel EDC"
-                                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                                android:textSize="18dp" />
 
                             <TextView
 
@@ -285,7 +306,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="10 AM"
-                                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                                android:textSize="18dp" />
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -297,10 +319,9 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-
                                     android:text="Total Price:"
-                                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                                    android:textColor="@color/colorBackButton"
+                                    android:textSize="22dp"
+                                    android:textColor="@color/red"
                                     android:textStyle="bold" />
 
                                 <TextView
@@ -309,12 +330,11 @@
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:text="RM 33.00"
-                                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                                    android:textColor="@color/colorBackButton"
+                                    android:textSize="22dp"
+                                    android:textColor="@color/red"
                                     android:textStyle="bold" />
                             </LinearLayout>
                         </LinearLayout>
-
                     </LinearLayout>
 
                 </LinearLayout>
@@ -332,9 +352,9 @@
                         android:layout_marginEnd="5dp"
                         android:layout_marginBottom="5dp"
                         android:layout_weight="1"
-                        android:background="@drawable/buttoncornerredline"
+                        android:background="@drawable/buttoncornerwhitered10"
                         android:text="Cancel"
-                        android:textColor="#B30000" />
+                        android:textColor="@color/colorBlack" />
 
                     <Button
                         android:id="@+id/acceptBtn"
@@ -343,7 +363,7 @@
                         android:layout_marginStart="5dp"
                         android:layout_marginBottom="5dp"
                         android:layout_weight="1"
-                        android:background="@drawable/buttoncornerredgrad2"
+                        android:background="@drawable/buttoncornerblack10"
                         android:text="Accept"
                         android:textColor="#ffffff" />
 

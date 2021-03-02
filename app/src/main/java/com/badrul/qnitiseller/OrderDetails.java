@@ -84,8 +84,8 @@ public class OrderDetails extends AppCompatActivity {
         phone = findViewById(R.id.phoneNumtxt);
         email = findViewById(R.id.buyerEmailtxt);
         matrix = findViewById(R.id.matrixIDtxt);
-        orType = findViewById(R.id.orderTypetxt);
-        orDay = findViewById(R.id.orderDayTxt);
+        orType = findViewById(R.id.orderTypeTxt);
+        orDay = findViewById(R.id.orderDaytxt);
         orDatenTime = findViewById(R.id.purchasedateNtime);
         orQTT = findViewById(R.id.orderqtt);
         orUsrType = findViewById(R.id.orderUserTypetxt);

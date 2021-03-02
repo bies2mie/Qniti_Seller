@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffff"
+    android:background="@color/colorBg"
 
     android:orientation="vertical">
     <!--<LinearLayout
@@ -38,7 +38,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/redgrad"
+        android:background="@color/red"
         android:orientation="horizontal">
 
         <TextView
@@ -51,6 +51,7 @@
             android:text="Welcome"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="#ffffff"
+            android:visibility="invisible"
             android:textStyle="bold" />
 
         <TextView
@@ -61,6 +62,7 @@
             android:padding="10dp"
             android:gravity="end"
             android:text="Kredit"
+            android:visibility="invisible"
             android:layout_marginRight="20dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="#FFFFFF"
@@ -80,6 +82,18 @@
             android:tint="#ffffff"/>
 
     </LinearLayout>
+
+    <EditText
+        android:layout_margin="10dp"
+        android:id="@+id/editTextSearch"
+        android:padding="10dp"
+        android:textSize="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:background="@drawable/layoutcornerwhite10"
+        android:drawableRight="@drawable/ic_magnifier_24"
+        android:hint="Search..." />
 
     <ImageView
         android:id="@+id/imageViewGone"
@@ -104,7 +118,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:background="#f5ce42"
         android:padding="5dp"
         android:layout_height="wrap_content"

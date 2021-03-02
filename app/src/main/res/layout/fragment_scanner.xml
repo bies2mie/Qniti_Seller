@@ -4,142 +4,88 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#ffff"
+    android:background="@mipmap/scanbg"
+    android:padding="20dp"
     tools:context=".ScannerFragment">
 
-    <LinearLayout android:layout_width="match_parent"
+    <ImageButton
+        android:id="@+id/logout"
+        android:scaleType="fitCenter"
+        android:layout_gravity="end"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@null"
+        android:tint="@color/colorDarkGrey"
+        android:src="@drawable/ic_logout" />
+
+    <TextView
+        android:id="@+id/userNama1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/redgrad"
-        android:orientation="horizontal"
-        xmlns:android="http://schemas.android.com/apk/res/android">
+        android:textColor="@color/red"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:text="Welcome" />
 
-        <TextView
-            android:id="@+id/userNama1"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginStart="10dp"
-            android:layout_weight="1"
-            android:padding="10dp"
-            android:text="Welcome"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="#ffffff"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/userCredit1"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="10dp"
-            android:gravity="end"
-            android:text="Kredit"
-            android:layout_marginRight="20dp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold" />
-
-        <ImageButton
-            android:id="@+id/logout"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="0.1"
-            android:layout_marginRight="5dp"
-            android:background="@android:color/transparent"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/ic_logout"
-            android:tint="#ffffff"/>
-
-    </LinearLayout>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/userCredit1"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="@color/colorBlack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="UserName" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_margin="5dp"
-        android:layout_height="match_parent"
-        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:background="@drawable/layoutcornerwhitetrans"
+        android:layout_marginTop="40dp"
         android:orientation="vertical">
 
         <TextView
-            android:layout_marginTop="70dp"
-            android:id="@+id/textView"
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textAlignment="center"
-            android:textColor="@color/colorNextButton"
+            android:textColor="@color/red"
+            android:gravity="center"
             android:textStyle="bold"
+            android:textSize="22dp"
             android:text="ORDER ID" />
 
         <EditText
             android:id="@+id/idInput"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="20dp"
-            android:textAlignment="center"
-            android:padding="10dp"
             android:layout_width="match_parent"
-            android:hint="Enter Order ID Here"
-            android:background="@drawable/textboxcornergrey"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="15dp"
+            android:padding="10dp"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:hint="Enter Order ID here"
+            android:background="@drawable/textboxcornergrey"
             android:inputType="number" />
 
-        <LinearLayout
+        <Button
             android:layout_marginTop="100dp"
-            android:padding="20dp"
+            android:id="@+id/qrbutton"
+            android:background="@drawable/buttoncornerblack10"
+            android:layout_width="match_parent"
+            android:textColor="@color/colorWhite"
+            android:layout_height="wrap_content"
+            android:text="Scan QR" />
+
+        <Button
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/submitBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageView
-
-                android:id="@+id/imageView"
-                android:padding="3dp"
-                android:scaleType="centerInside"
-                android:layout_width="0dp"
-                android:layout_height="75dp"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:src="@drawable/ic_qr" />
-
-            <Button
-                android:id="@+id/qrbutton"
-                android:layout_gravity="center"
-                android:background="@drawable/buttoncornergradientgreen"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:textColor="#FFFFFF"
-                android:text="Scan QR" />
-        </LinearLayout>
-
-        <LinearLayout
-
-            android:padding="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/imageView2"
-                android:scaleType="centerInside"
-                android:layout_width="0dp"
-                android:layout_height="75dp"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:paddingBottom="-444dp"
-                android:src="@drawable/ic_submit" />
-
-            <Button
-                android:id="@+id/submitBtn"
-                android:layout_gravity="center"
-                android:background="@drawable/buttoncornerred"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:textColor="#ffffff"
-                android:text="CHECK ID" />
-        </LinearLayout>
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/buttoncornerred10"
+            android:text="CHECK ID" />
     </LinearLayout>
 </LinearLayout>

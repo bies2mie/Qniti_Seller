@@ -6,11 +6,12 @@
     android:orientation="vertical">
 
     <RelativeLayout
+        android:layout_margin="5dp"
         android:id="@+id/testing"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="8dp"
-        android:background="@drawable/adaptergreenstroke"
+        android:background="@drawable/textboxwhiteround"
         android:paddingBottom="8dp"
         android:paddingLeft="10dp"
         android:paddingRight="8dp">

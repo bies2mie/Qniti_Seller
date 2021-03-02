@@ -38,7 +38,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/redgrad"
+        android:background="@color/red"
         android:orientation="horizontal">
 
         <TextView
@@ -49,6 +49,7 @@
             android:layout_weight="1"
             android:padding="10dp"
             android:text="Welcome"
+            android:visibility="invisible"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="#ffffff"
             android:textStyle="bold" />
@@ -61,6 +62,7 @@
             android:padding="10dp"
             android:gravity="end"
             android:text="Kredit"
+            android:visibility="invisible"
             android:layout_marginRight="20dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="#FFFFFF"

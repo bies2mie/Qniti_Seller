@@ -2,14 +2,14 @@ apply plugin: 'com.android.application'
 
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.2"
+    compileSdkVersion 30
+    buildToolsVersion "29.0.3"
     defaultConfig {
         applicationId "com.badrul.qnitiseller"
         minSdkVersion 21
-        targetSdkVersion 29
-        versionCode 7
-        versionName "1.51"
+        targetSdkVersion 30
+        versionCode 8
+        versionName "1.6_DEMO"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

@@ -43,6 +43,8 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class ScannerFragment extends Fragment {
 
@@ -98,8 +100,8 @@ public class ScannerFragment extends Fragment {
         logout = myView.findViewById(R.id.logout);
 
         orderList = new ArrayList<>();
-
-        userCredit_tx.setText(adminID_Shared);
+        String chars = capitalize(adminID_Shared);
+        userCredit_tx.setText(chars);
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -314,4 +316,14 @@ public class ScannerFragment extends Fragment {
             }
 
         }
-    }}
+    }
+    private String capitalize(String capString){
+        StringBuffer capBuffer = new StringBuffer();
+        Matcher capMatcher = Pattern.compile("([a-z-éá])([a-z-éá]*)", Pattern.CASE_INSENSITIVE).matcher(capString);
+        while (capMatcher.find()){
+            capMatcher.appendReplacement(capBuffer, capMatcher.group(1).toUpperCase() + capMatcher.group(2).toLowerCase());
+        }
+
+        return capMatcher.appendTail(capBuffer).toString();
+    }
+}

@@ -7,9 +7,12 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -62,6 +65,9 @@ public class CompleteFragment extends Fragment implements OrderAdapter.OnItemCli
     String currentDate;
     TextView showtodayQTT;
     String sellerID;
+    OrderAdapter adapter;
+    EditText editTextSearch;
+    ArrayList<Order> filterdNames;
 
 
     @Nullable
@@ -83,6 +89,7 @@ public class CompleteFragment extends Fragment implements OrderAdapter.OnItemCli
         imgGone = myView.findViewById(R.id.imageViewGone);
         txtGone = myView.findViewById(R.id.textViewGone);
         showtodayQTT = myView.findViewById(R.id.showtodayqtt);
+        editTextSearch = myView.findViewById(R.id.editTextSearch);
 
 
         //userNama_tx.setText(userNama);
@@ -106,6 +113,29 @@ public class CompleteFragment extends Fragment implements OrderAdapter.OnItemCli
         //to display it in recyclerview
         todayProcessQTT();
         loadOrder();
+
+        editTextSearch.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                /*if(filterdNames!=null){
+                    filterdNames.clear();
+                } */
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                //after the change calling the method and passing the search input
+                filter(editable.toString());
+
+            }
+        });
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -160,6 +190,26 @@ public class CompleteFragment extends Fragment implements OrderAdapter.OnItemCli
         return myView;
     }
 
+    private void filter(String text) {
+        //new array list that will hold the filtered data
+        filterdNames = new ArrayList<>();
+        //looping through existing elements
+        for (Order s : orderList) {
+
+            //if the existing elements contains the search input
+            if (s.getOrderDate().toLowerCase().contains(text.toLowerCase())||s.getOrderType().toLowerCase().contains(text.toLowerCase())
+                    ||s.getOrderQTT().toLowerCase().contains(text.toLowerCase())||s.getPuLocation().toLowerCase().contains(text.toLowerCase())
+                    ||s.getOrderDay().toLowerCase().contains(text.toLowerCase())||s.getTotalPrice().toLowerCase().contains(text.toLowerCase())
+                    ||String.valueOf(s.getOrderID()).toLowerCase().contains(text.toLowerCase())||String.valueOf(s.getNameID()).toLowerCase().contains(text.toLowerCase())
+                    ||String.valueOf(s.getPhoneID()).toLowerCase().contains(text.toLowerCase())||String.valueOf(s.getMatrixID()).toLowerCase().contains(text.toLowerCase())) {
+                //adding the element to filtered list
+                filterdNames.add(s);
+            }
+        }
+
+        //calling a method of the adapter class and passing the filtered list
+        adapter.filterList(filterdNames);
+    }
 
     private void loadOrder() {
 
@@ -203,7 +253,7 @@ public class CompleteFragment extends Fragment implements OrderAdapter.OnItemCli
                             }
 
                             //creating adapter object and setting it to recyclerview
-                            OrderAdapter adapter = new OrderAdapter(getActivity().getApplicationContext(), orderList);
+                            adapter = new OrderAdapter(getActivity().getApplicationContext(), orderList);
                             recyclerView.setAdapter(adapter);
                             adapter.setOnClick(CompleteFragment.this);
 
