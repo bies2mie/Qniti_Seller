@@ -8,8 +8,8 @@ android {
         applicationId "com.badrul.qnitiseller"
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 8
-        versionName "1.6_DEMO"
+        versionCode 9
+        versionName "1.61_DEMO"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

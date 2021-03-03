@@ -87,7 +87,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         );
         mBuilder.setContentIntent(notifyPendingIntent);
 
-        notificationManager.notify(notificationId, mBuilder.build());
+        notificationManager.notify(( int ) System. currentTimeMillis (), mBuilder.build());
     }
 
     private void createNotification( String messageBody) {
@@ -122,7 +122,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         );
         mBuilder.setContentIntent(notifyPendingIntent);
 
-        notificationManager.notify(notificationId, mBuilder.build());
+        notificationManager.notify(( int ) System. currentTimeMillis (), mBuilder.build());
 
     }
 }
